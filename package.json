@@ -1,0 +1,66 @@
+{
+  "name": "dsh-refresh",
+  "version": "0.1.0",
+  "description": "DSH web plugin: an '刷新' (refresh) button in the sidebar footer that refreshes the plugin inventory and reloads the page so newly installed plugins take effect without restarting the desktop app.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Woeful001/dsh-refresh.git"
+  },
+  "homepage": "https://github.com/Woeful001/dsh-refresh#readme",
+  "bugs": {
+    "url": "https://github.com/Woeful001/dsh-refresh/issues"
+  },
+  "author": "Woeful001",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh-desktop",
+    "refresh",
+    "reload",
+    "hot-reload",
+    "plugin-manager"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-store",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
