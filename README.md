@@ -8,6 +8,10 @@
 
 ---
 
+![侧边栏底部的刷新按钮](docs/refresh-button.png)
+
+> 刷新按钮位于**侧边栏底部操作区**，就在 Settings 按钮旁边（截图中已圈出）。
+
 ## 功能简介
 
 `dsh-refresh` 在 DSH 桌面应用的**侧边栏底部操作区**（Settings 按钮旁边）注入一个圆形 **刷新** 图标按钮。点击它：
@@ -94,6 +98,10 @@ dsh-refresh/
 ---
 
 ## <a name="english"></a>English
+
+![The refresh button in the sidebar footer](docs/refresh-button.png)
+
+> The refresh button sits in the **sidebar footer**, right next to Settings (highlighted in the screenshot).
 
 `dsh-refresh` is a DSH desktop plugin that adds a **refresh** button to the sidebar footer. Pressing it refreshes the plugin inventory and reloads the page, so **newly installed plugins take effect without restarting the desktop app**.
 
