@@ -31,15 +31,11 @@ DSH 内部其实已经有这些机制：
 
 ## 安装
 
-### 方式一：从 npm / registry 安装（推荐）
+> ⚠️ **注意包名**：本插件的仓库名是 `dsh-refresh`，但 npm 上的 `dsh-refresh` 属于**另一个插件**（F5 快捷键重载），`dsh-refresh-button` 同样是他人发布的包。请勿执行 `npm i dsh-refresh` / `dsh plugin add dsh-refresh`，那会装到别的插件。本插件目前**未发布到 npm**，请按下面的源码方式安装。
 
-```bash
-dsh plugin --profile desktop add dsh-refresh
-```
+### 方式一：从源码目录（link）安装（推荐）
 
-### 方式二：从源码目录（link）安装
-
-如果你克隆了本仓库，可用本地路径安装：
+克隆本仓库后，用本地路径安装：
 
 ```bash
 dsh plugin --profile desktop add /path/to/dsh-refresh
@@ -53,7 +49,7 @@ pnpm --dir ~/.dsh/profiles/desktop add "link:/path/to/dsh-refresh" --config.fetc
 
 > 说明：直接 link 安装后，需要把 `dsh-refresh` 加入 profile 的 `dsh.profile.bundles` 激活清单（`~/.dsh/profiles/desktop/package.json`）。
 
-### 方式三：手动补充到 profile
+### 方式二：手动补充到 profile
 
 把 `dsh-refresh` 加入 `dsh.profile.bundles` 数组，并确保它以依赖形式安装到 profile 的 `node_modules`。
 
@@ -115,11 +111,15 @@ DSH generates a fresh boot manifest for every page request. Installing a plugin 
 
 ### Install
 
+> ⚠️ **Package name**: this plugin is **not published to npm**. The npm package `dsh-refresh` belongs to a *different* DSH plugin (F5/Ctrl+F5 keyboard reload), and `dsh-refresh-button` is someone else's package too. Do not run `npm i dsh-refresh` or `dsh plugin add dsh-refresh` — that installs a different plugin. Use the local source install below.
+
+Clone this repository, then install from the local directory:
+
 ```bash
-dsh plugin --profile desktop add dsh-refresh
+dsh plugin --profile desktop add /path/to/dsh-refresh
 ```
 
-Or from a local source directory via pnpm link (see [安装](#安装) above).
+Or link it directly with pnpm (see [安装](#安装) above).
 
 ### Compatibility
 
